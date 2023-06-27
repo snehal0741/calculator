@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Viewport" Content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <style>
+            .calculator
+            {
+                background-color:#456480;
+                height: 580px;
+                width: 360px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+                border-radius:40px 40px  50px 50px;
+                padding:8px;
+            }
+            .cal-name
+            {
+                color: white;
+                font-family:'Eurostile extended',Impact;
+                font-size: 170%;
+                text-transform: uppercase;
+                display: block;
+                margin-top: 25px;
+                margin-left: 20px;
+            }
+           .small-screen-cont
+           {
+            display: flex;
+            float: right;
+            margin-top: -23px;
+            margin-right: 20px;
+           }
+           .small-screen
+           {
+            border: 1px solid black;
+            background-color:aliceblue;
+            height: 20px;
+            width: 25px;
+            
+           }
+            .cal-text
+            {
+            height: 50px;
+            width:310px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            padding: 4px;
+            font-size: 27px;
+            border-radius: 2px;
+        }
+        .cal-btn1
+        {
+            font-size: 15px;
+            justify-content: space-evenly;
+            border: 1px solid;
+            margin-left: 10px;
+            margin-top: 35px;
+            border-radius: 25px 25px 30px 30px;
+            padding-left: 8px;
+            padding-right: 8px;
+            box-shadow: 2px 2px 5px 0 black;
+            float: left;
+        }
+        .cal-btn2
+        {
+            font-size: 15px;
+            justify-content: space-evenly;
+            border: 1px solid;
+            margin-right: 10px;
+            margin-top: 35px;
+            border-radius: 25px 25px 30px 30px;
+            padding-left: 8px;
+            padding-right: 8px;
+            box-shadow: 2px 2px 5px 0 black;
+            float: right;
+        }
+        
+        .cal-replay-btn
+        {
+            font-size:17px ;
+            border-radius: 20px 20px 30px 30px;
+            height: 70px;
+            text-align: center;
+            margin-left: 15px;
+            margin-top:10px ;
+            box-shadow: 2px 2px 5px 0 black;
+        }
+         .container-btn
+         {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 15px;
+         }
+         .row-button
+         {
+            font-size: 15px;
+            border: 1.5px 1.5px 0 0 ;
+            border-radius: 5px 0 5px 0;
+            padding-left: 8px;
+            padding-right: 8px;
+            box-shadow: 2px 2px 5px 0;
+            background-color: #273f3f;
+            color: white;
+         }
+         .cal-num-row-button
+         {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top:24px ;
+         }
+         .cal-num-btn
+         {
+            font-size: 20px;
+            border: 2px 2px 0 0 ;
+            border-radius: 4px 4px 10px 10px;
+           padding-left: 13px;
+            padding-right: 13px;
+            text-align: center;
+            box-shadow: 2px 2px 5px 0 black;
+         }
+         .element
+          {
+            padding: 1%;
+            font-size: 15px;
+            background-color: tomato;
+            color: white;
+         }
+         .btn-effect:hover
+         {
+            cursor: pointer;
+            transition: 1s;
+            border-radius: 50px;
+          
+         }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+     <span class="cal-name">CASIO</span>
+     <div class="small-screen-cont">
+        <div class="small-screen"></div>
+        <div class="small-screen"></div>
+        <div class="small-screen"></div>
+        <div class="small-screen"></div>
+     </div>
+            <input type="text" class="cal-text"/>
+            <button class="cal-btn1 btn-effect ">Shift</button>
+            <button class="cal-btn1 btn-effect">Alpha</button>
+            <button class="cal-replay-btn btn-effect"><b>Replay</b></button>
+            <button class="cal-btn2 btn-effect">On/Off</button>
+            <button class="cal-btn2 btn-effect">Mode</button>
+            <div class="container-btn">
+                <button class="row-button btn-effect">log</button>
+                <button class="row-button btn-effect">hyp</button>
+                <button class="row-button btn-effect">sin</button>
+                <button class="row-button btn-effect">cos</button>
+                <button class="row-button btn-effect">tan</button>
+                <button class="row-button btn-effect">nCr</button>
+            </div>
+            <div class="container-btn">
+                <button class="row-button btn-effect">(-)</button>
+                <button class="row-button btn-effect">x^2</button>
+                <button class="row-button btn-effect">lns</button>
+                <button class="row-button btn-effect">Pol</button>
+                <button class="row-button btn-effect">a/b</button>
+                <button class="row-button btn-effect">nPr</button>
+            </div>
+            <div class="container-btn">
+                <button class="row-button btn-effect">rcl</button>
+                <button class="row-button btn-effect">hyp</button>
+                <button class="row-button btn-effect">eng</button>
+                <button class="row-button btn-effect">M+</button>
+                <button class="row-button btn-effect">M-</button>
+                <button class="row-button btn-effect">rec</button>
+            </div>
+            <div class="cal-num-row-button row1"> 
+                <button class="cal-num-btn btn-effect">7</button>
+                <button class="cal-num-btn btn-effect">8</button>
+                <button class="cal-num-btn btn-effect">9</button>
+                <button class="cal-num-btn  element btn-effect">DEL</button>
+                <button class="cal-num-btn element btn-effect">AC</button>
+            </div>
+            <div class="cal-num-row-button row2">
+                <button class="cal-num-btn btn-effect">4</button>
+                <button class="cal-num-btn btn-effect">5</button>
+                <button class="cal-num-btn btn-effect">6</button>
+                <button class="cal-num-btn btn-effect">x</button>
+                <button class="cal-num-btn btn-effect">/</button>
+            </div>
+             <div class="cal-num-row-button row3">
+                <button class="cal-num-btn btn-effect">1</button>
+                <button class="cal-num-btn btn-effect">2</button>
+                <button class="cal-num-btn btn-effect">3</button>
+                <button class="cal-num-btn btn-effect">+</button>
+                <button class="cal-num-btn btn-effect">-</button>
+            </div>
+            <div class="cal-num-row-button row4">
+                <button class="cal-num-btn btn-effect">0</button>
+                <button class="cal-num-btn btn-effect">.</button>
+                <button class="cal-num-btn btn-effect">%</button>
+                <button class="cal-num-btn element btn-effect">Exp</button>
+                <button class="cal-num-btn btn-effect">=</button>
+            </div>
+        </div>
+         
+    </body>
+</html>
